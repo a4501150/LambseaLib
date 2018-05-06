@@ -1,0 +1,11 @@
+﻿  Lib.cpp
+c:\users\jinyang\desktop\cs565\lambsealib\lambsealib\Exports.h(782): warning C4267: 'argument': conversion from 'size_t' to 'DWORD', possible loss of data
+c:\users\jinyang\desktop\cs565\lambsealib\lambsealib\Exports.h(795): warning C4267: 'argument': conversion from 'size_t' to 'DWORD', possible loss of data
+c:\users\jinyang\desktop\cs565\lambsealib\lambsealib\Exports.h(808): warning C4267: 'argument': conversion from 'size_t' to 'DWORD', possible loss of data
+c:\users\jinyang\desktop\cs565\lambsealib\lambsealib\Exports.h(891): warning C4312: 'type cast': conversion from 'DWORD' to 'HANDLE' of greater size
+c:\users\jinyang\desktop\cs565\lambsealib\lambsealib\Exports.h(1015): warning C4244: 'argument': conversion from 'SIZE_T' to 'DWORD', possible loss of data
+     Creating library C:\Users\Jinyang\Desktop\CS565\LambseaLib\x64\Release\LambseaLib.lib and object C:\Users\Jinyang\Desktop\CS565\LambseaLib\x64\Release\LambseaLib.exp
+  Generating code
+c:\users\jinyang\desktop\cs565\lambsealib\lambsealib\exports.h(957): warning C4172: returning address of local variable or temporary: fullPath
+  Finished generating code
+  LambseaLib.vcxproj -> C:\Users\Jinyang\Desktop\CS565\LambseaLib\x64\Release\LambseaLib.exe
