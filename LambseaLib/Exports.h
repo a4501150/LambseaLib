@@ -78,7 +78,7 @@ inline PWCHAR __declspec(dllexport) GetFileFullPath(PWCHAR RelativePath);
 //Inject a dll using ldrLoadDll
 inline BOOL __declspec(dllexport) LdrLoadDllInject(DWORD ProcID, PWCHAR DLLNAME);
 
-
+inline int  __declspec(dllexport) GenerateRandomNumber(int lowerBound, int upperBound, BOOL includeLowerBound, BOOL includeUpperBound);
 
 namespace CPUZ {
 
@@ -977,6 +977,31 @@ inline BOOL LdrLoadDllInject(DWORD ProcID, PWCHAR DLLNAME)
 	}
 
 	return 0;
+}
+
+
+inline int GenerateRandomNumber(int lowerBound, int upperBound, BOOL includeLowerBound, BOOL includeUpperBound)
+{
+
+	int out;
+
+	if (includeLowerBound)
+	{
+		if (!includeUpperBound)
+			out = lowerBound + rand() % (upperBound-1);
+		else
+			out = lowerBound + rand() % upperBound;
+	}
+	else
+	{
+		if (!includeUpperBound)
+			out = (lowerBound+1) + rand() % (upperBound-2);
+		else
+			out = (lowerBound+1) + rand() % (upperBound-1);
+	}
+	
+	
+	return out;
 }
 
 inline UNICODE_STRING __declspec(dllexport) GetDriverServiceFull(PWCHAR DriverName) 

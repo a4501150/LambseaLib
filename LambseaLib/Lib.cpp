@@ -27,16 +27,24 @@ void PocLoadUnsignedDriver() {
 
 }
 
+
+#include <time.h>
+//testing purpose
 int main() {
 	
+	srand(time(NULL));
+
+	for(int i =0;i<10;i++)
+		printf("random number %d \n", GenerateRandomNumber(1, 10, false, true));
+
 	//show up load an unsigned shit 
 	//PocLoadUnsignedDriver();
 	//SafeDeleteFile(L"Lambsea.sys", false);
-	AdjustRights(L"SeLoadDriverPrivilege", true);
-	SafeUnloadDriver(L"Lambsea");
-	LoadDriver(L"Lambsea");
-	system("pause");
-	SafeUnloadDriver(L"Lambsea");
+	//AdjustRights(L"SeLoadDriverPrivilege", true);
+	//SafeUnloadDriver(L"Lambsea");
+	//LoadDriver(L"Lambsea");
+	//system("pause");
+	//SafeUnloadDriver(L"Lambsea");
 
 	return 0;
 }
